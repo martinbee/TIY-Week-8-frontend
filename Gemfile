@@ -7,6 +7,7 @@ gem 'rails_12factor'
 gem 'dotenv-rails'
 gem 'simple_form'
 gem 'normalize-rails'
+gem 'remotipart', '~> 1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
