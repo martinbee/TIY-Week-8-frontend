@@ -1,3 +1,112 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$off-white: #FFFFED;
+$off-black: #252525;
+
+html
+{
+    overflow-x: hidden;
+}
+
+.nav-btn {
+  border-radius: 0em;
+  color: $off-white !important;
+  border: 1px solid $off-white !important;
+  background-color: $off-black !important;
+  font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
+
+  &:hover {
+    color: $off-black !important;
+    background-color: $off-white !important;
+    border: 1px solid $off-white !important;
+  }
+}
+
+.navbar-default {
+  background-color: $off-black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $off-black;
+  margin-bottom: 4em;
+  margin-top: 0em;
+  font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+
+
+  #user-name {
+    color: $off-white;
+    font-size: 2em;
+    padding-top: .2em;
+  }
+  .navbar-brand {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 0em;
+  }
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 86.22%;
+    z-index: 100;
+}
+
+#nav-wrapper {
+  min-height: 100px;
+}
+
+#user-links {
+  text-align: center;
+}
+
+body {
+  background-color: $off-black;
+}
+
+.thumbnail {
+  height: 11em;
+  background-color: $off-white;
+  font-family: Palatino, Garamond, Georgia, serif;
+  font-size: 1.4em;
+}
+
+.jumbotron {
+  background-color: $off-white;
+  font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
+  margin-bottom: 3.8em;
+  .container {
+    padding-left: 1.1em;
+    h1 {
+      font-size: 6em;
+      margin-bottom: 0em;
+      color: #FF5858;
+    }
+    h4 {
+      margin-left: 2.3em;
+      margin-top: 0em;
+      font-size: 1.5em;
+      font-family: Palatino, Garamond, Georgia, serif;
+    }
+  }
+}
+
+#post-username {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-default {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .navbar-toggle {
+      margin-right: 0em;
+    }
+  }
+  #post-row {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+}

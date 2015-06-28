@@ -1,21 +1,23 @@
 <div class="jumbotron">
-  <div class="page-header">
-    <h1>Skeletons</h1>
+  <div class="container">
+    <div id="top">
+      <h1>SKELETONS</h1>
+      <h4>Let your skeletons out to dance</h4>
+    </div>
   </div>
 </div>
-<div class="container">
-  <div class="row" id="user-links">
+<div class="container" id="nav-wrapper">
+  <div class="row"  data-spy="affix" data-offset-top="400" id="nav" id="user-links">
     <%= render partial: 'links' %>
   </div>
 </div>
 <div class="container">
-  <div class="row">
+  <div class="row" id="post-row">
     <div id="posts">
       <%= render partial: 'posts' %>
     </div>
   </div>
 </div>
-<%= session[:id].nil? %>
 
 <div class="modal fade" id="index-modal">
   <div class="modal-dialog">

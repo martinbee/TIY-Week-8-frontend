@@ -1,6 +1,8 @@
 <% if @response.code == 201 %>
   $("#index-modal").modal("hide");
-  $("#index-modal .modal-body").html("<%= j render partial: 'posts' %>");
+  <% response = Http.get("http://localhost:3000/posts.json") %>
+  <% @posts = JSON.parse response %>
+  $("#posts").html("<%= j render partial: 'posts' %>");
 <% else %>
   flash.now[:alert] = "💀Invalid"
   $("#index-modal .modal-body").html("<%= j render partial: 'new' %>");

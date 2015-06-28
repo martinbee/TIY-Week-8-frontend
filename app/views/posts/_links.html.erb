@@ -1,11 +1,27 @@
-<div class="col-xs-2">
-  <% if !@user_name.nil? %>
-    <h3><%= @user_name %></h3>
-    <%= link_to "Sign Out", :sign_out, class:"btn btn-primary center-block", :method => :delete %>
-    <%= link_to "New Skeleton", :new_post, remote: true, class:"btn btn-primary center-block" %>
-  <% else %>
-    <%= link_to "Sign In", :new_session, remote: true, class:"btn btn-primary center-block" %>
-  <% end %>
-</div>
-<div>
-</div>
+
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#top"><%= image_tag 'Logo.png', height: 50, width: 50 %></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if !@user_name.nil? %>
+        <ul class="nav navbar-nav">
+          <li id="user-name"><%= @user_name %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "New Skeleton", :new_post, remote: true, class:"nav-btn btn btn-lg" %></li>
+          <li><%= link_to "Sign Out", :sign_out, class:" nav-btn btn btn-lg", :method => :delete %></li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Sign In", :new_session, remote: true, class:"nav-btn btn btn-lg" %></li>
+        </ul>
+      <% end %>
+    </div>
+  </nav>
