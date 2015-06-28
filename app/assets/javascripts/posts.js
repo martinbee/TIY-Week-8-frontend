@@ -1,6 +1,6 @@
 $(window).ready(function(){
 
-  $('#nav').affix({
+  $('.nav-div').affix({
     offset: {
             top: 296
         }

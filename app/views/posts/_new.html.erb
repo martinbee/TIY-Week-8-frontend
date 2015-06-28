@@ -8,6 +8,6 @@
     <div class= "col-xs-8 col-xs-offset-2">
       <%= f.input :content, as: :text, label:false, placeholder: "Content"%>
       <%= f.hidden_field :user_id, value: session[:id] %>
-      <%= f.submit "Post", class: "btn btn-primary" %>
+      <%= f.submit "Post", class: "btn btn-primary modal-btn" %>
     </div>
   <% end %>

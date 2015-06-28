@@ -19,7 +19,6 @@ html
     border: 1px solid $off-white !important;
   }
 }
-
 .navbar-default {
   background-color: $off-black;
   border-top: none;
@@ -45,7 +44,7 @@ html
   }
 }
 
-#nav.affix {
+.nav-div.affix {
     top: 0;
     min-width: 85.6%;
     z-index: 100;
@@ -93,8 +92,27 @@ body {
 #post-username {
   font-style: italic;
 }
+.modal-content {
+  background-color: $off-white;
+  border-radius: 0;
+  font-family: Palatino, Garamond, Georgia, serif;
+  .modal-header {
+    border-bottom: none;
+    font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
+  }
+}
 
-@media (max-width: 768px) {
+.modal-btn {
+  border-radius: 0em;
+  color: $off-black !important;
+  background-color: $off-white !important;
+  border: 1px solid $off-black !important;
+  font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
+  &:hover {
+    color: $off-white !important;
+    background-color: $off-black !important;
+    border: 1px solid $off-black !important;
+  }
 }
 @media (max-width: 768px) {
 
@@ -116,7 +134,7 @@ body {
     margin-right: 0em;
   }
 
-  #nav.affix {
+  .nav-div.affix {
       min-width: 100%;
   }
 

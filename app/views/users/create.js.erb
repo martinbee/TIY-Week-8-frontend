@@ -2,6 +2,7 @@
   $("#index-modal").modal("hide");
   <% user = JSON.parse(@response) %>
   <% session[:user_name] = user["name"] %>
+  <% session[:id] = user["id"] %>
   <% session[:token] = user["token"] %>
   <% @user_name = session[:user_name] %>
   $("#user-links").html("<%= j render partial: 'posts/links' %>");
