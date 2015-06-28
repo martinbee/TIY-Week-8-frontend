@@ -31,7 +31,7 @@ html
   font-family: "Hallo Sans", 'Roboto Condensed', sans-serif;
   padding-left: 1.1em;
   padding-right: 1.1em;
-
+  width: 100%;
 
   #user-name {
     color: $off-white;
@@ -46,9 +46,8 @@ html
 }
 
 #nav.affix {
-    position: fixed;
     top: 0;
-    width: 86.22%;
+    min-width: 85.6%;
     z-index: 100;
 }
 
@@ -96,11 +95,18 @@ body {
 }
 
 @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+
+  .jumbotron {
+    height: 17.2em;
+  }
 
   .navbar-default {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
     .navbar-toggle {
       margin-right: 0em;
     }
@@ -109,4 +115,9 @@ body {
     margin-left: 0em;
     margin-right: 0em;
   }
+
+  #nav.affix {
+      min-width: 100%;
+  }
+
 }

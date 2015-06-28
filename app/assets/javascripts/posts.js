@@ -1,6 +1,3 @@
-$('#nav').affix({
-});
-
 $(window).ready(function(){
 
   $('#nav').affix({
