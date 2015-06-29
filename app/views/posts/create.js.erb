@@ -1,6 +1,6 @@
 <% if @response.code == 201 %>
   $("#index-modal").modal("hide");
-  <% response = Http.get("http://localhost:3000/skeletons.json") %>
+  <% response = Http.get("https://skeletons-tiy-backend.herokuapp.com/skeletons.json") %>
   <% @posts = JSON.parse response %>
   $("#posts").html("<%= j render partial: 'posts' %>");
 <% else %>
