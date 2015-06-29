@@ -7,6 +7,5 @@
   <% @user_name = session[:user_name] %>
   $("#user-links").html("<%= j render partial: 'posts/links' %>");
 <% else %>
-  flash.now[:alert] = "💀Invalid"
   $("#index-modal .modal-body").html("<%= j render partial: 'new' %>");
 <% end %>
