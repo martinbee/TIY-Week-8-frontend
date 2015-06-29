@@ -3,7 +3,7 @@ class SessionController < ApplicationController
   end
 
   def create
-    @response = Http.post("http://localhost:3000/auth.json", json: {email: params[:session][:email], password: params[:session][:password]})
+    @response = Http.post("https://skeletons-tiy-backend.herokuapp.com/auth.json", json: {email: params[:session][:email], password: params[:session][:password]})
   end
 
   def destroy
