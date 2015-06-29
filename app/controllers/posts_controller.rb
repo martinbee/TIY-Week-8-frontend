@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    response = Http.get("https://skeletons-tiy-backend.herokuapp.com/skeletons.json")
+    response = Http.get("http://localhost:3000/skeletons.json")
     @posts = JSON.parse response
     @user_name = session[:user_name]
   end
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @response = Http.post("https://skeletons-tiy-backend.herokuapp.com/skeletons.json", json: {skeleton:{content: params[:post][:content], user_id: params[:post][:user_id]}})
+    @response = Http.post("http://localhost:3000/skeletons.json", json: {skeleton:{content: params[:post][:content], user_id: params[:post][:user_id]}})
     @posts = JSON.parse @response
     @user_name = session[:user_name]
   end

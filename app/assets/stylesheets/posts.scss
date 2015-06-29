@@ -120,10 +120,17 @@ body {
     border: 1px solid $off-black !important;
   }
 }
+
+
 @media (max-width: 768px) {
 
   .jumbotron {
     height: 17.2em;
+    .container {
+      h1 {
+        font-size: 5.6em;
+      }
+    }
   }
 
   .navbar-default {
@@ -144,4 +151,31 @@ body {
       min-width: 100%;
   }
 
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+
+      .jumbotron {
+        .container {
+          h1 {
+            font-size: 5.35em;
+          }
+          h4 {
+            font-size: 1.3em;
+          }
+        }
+      }
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+  .jumbotron {
+    .container {
+      h1 {
+        font-size: 4.7em;
+      }
+      h4 {
+        font-size: 1.2em;
+      }
+    }
+  }
 }
