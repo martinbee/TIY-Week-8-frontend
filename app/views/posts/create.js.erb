@@ -4,6 +4,5 @@
   <% @posts = JSON.parse response %>
   $("#posts").html("<%= j render partial: 'posts' %>");
 <% else %>
-  flash.now[:alert] = "💀Invalid"
   $("#index-modal .modal-body").html("<%= j render partial: 'new' %>");
 <% end %>
